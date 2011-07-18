@@ -497,7 +497,7 @@
 			title
 				.addClass('fancybox-title-' + currentOpts.titlePosition)
 				.html( titleStr )
-				.appendTo( 'body' )
+				.appendTo('#fancybox')
 				.show();
 
 			switch (currentOpts.titlePosition) {
@@ -1037,7 +1037,8 @@
 			return;
 		}
 
-		$('body').append(
+		$('body').append('<div id="fancybox"></div>');
+		$('#fancybox').append(
 			tmp	= $('<div id="fancybox-tmp"></div>'),
 			loading	= $('<div id="fancybox-loading"><div></div></div>'),
 			overlay	= $('<div id="fancybox-overlay"></div>'),
